@@ -18,7 +18,7 @@ const QueAns = () => {
 
       <div className='mb-8'>
         <h3 className='text-xl font-semibold mb-3'>Q2. What is the difference between Props and State?</h3>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto shadow-lg">
           <table className="table w-full text-black">
             <thead>
               <tr>
@@ -61,7 +61,7 @@ const QueAns = () => {
       <div>
         <h3 className='text-xl font-semibold mb-3'>Q3. What are the other uses of useEffect hook except data loading?</h3>
         <p className='text-base mb-1'>useEffect actually controls the side effect in ReactJS with or without dependency. One of the most common use of useEffect is data loading from fetch, but also there are some important uses of useEffect which are:</p>
-        <ol className='list-decimal pl-4'>
+        <ol className='list-decimal pl-5'>
           <li>To validating input field.</li>
           <li>To live filtering.</li>
           <li>To trigger animation on new array value.</li>

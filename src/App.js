@@ -5,6 +5,7 @@ import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
 import Activity from './Components/Activity/Activity';
 import ExerciseDetails from './Components/ExerciseDetails/ExerciseDetails';
 import QueAns from './Components/QueAns/QueAns';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   const [activities, setActivities] = useState([]);
@@ -40,11 +41,11 @@ function App() {
           <ExerciseDetails reqTime={reqTime}></ExerciseDetails>
         </div>
       </div>
-      <div className='QueAns-container bg-teal-900 text-white rounded-xl '>
+      <div className='QueAns-container bg-white shadow-xl rounded-2xl '>
         <QueAns></QueAns>
       </div>
       <div>
-        
+        <Footer></Footer>
       </div>
     </div>
   );
