@@ -29,6 +29,21 @@ const ExerciseDetails = () => {
         </div>  
       </div>
 
+      <div className='mt-8 mb-16 lg:mt-0 lg:mb-0 flex justify-between lg:block'>
+        <div className='lg:my-8'>
+          <h2 className='text-xl font-semibold mb-4'>Add A Break</h2>
+          <div className='bg-slate-100 p-6 rounded-lg flex flex-wrap justify-between gap-3 w-1/2 lg:w-full'>
+            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white '>10min</button>
+            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>20min</button>
+            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>30min</button>
+            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>40min</button>
+            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>50min</button>
+            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>60min</button>
+          </div>
+        </div>
+        
+      </div>
+
       
     </div>
   );
