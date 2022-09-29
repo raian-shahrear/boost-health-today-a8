@@ -41,7 +41,17 @@ const ExerciseDetails = () => {
             <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>60min</button>
           </div>
         </div>
-        
+        <div className='lg:mb-16 w-1/2 lg:w-full'>
+          <h2 className='text-xl font-semibold mb-4'>Exercise Details</h2>
+          <div className='bg-slate-100 p-6 mb-4 rounded-lg flex flex-wrap justify-between'>
+            <h3 className='text-lg font-semibold'>Exercise time</h3>
+            <h3 className='text-lg font-semibold text-slate-500'><span>0</span> minutes</h3>
+          </div>
+          <div className='bg-slate-100 p-6 rounded-lg flex flex-wrap justify-between'>
+            <h3 className='text-lg font-semibold'>Break time</h3>
+            <h3 className='text-lg font-semibold text-slate-500'><span>0</span> minutes</h3>
+          </div>
+        </div>
       </div>
 
       
