@@ -29,7 +29,7 @@ function App() {
           <h1 className='text-4xl font-bold text-teal-600 my-16 lg:my-24 flex items-center gap-2'>
             <FontAwesomeIcon icon={faDumbbell} />
             <p>Boost Health Today</p>
-            </h1>
+          </h1>
           <div className='my-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {
               activities.map(activity => <Activity key={activity.id} activity={activity} AddToList={AddToList}></Activity>)
@@ -40,8 +40,11 @@ function App() {
           <ExerciseDetails reqTime={reqTime}></ExerciseDetails>
         </div>
       </div>
-      <div className='QueAns-container'>
+      <div className='QueAns-container bg-teal-900 text-white rounded-xl '>
         <QueAns></QueAns>
+      </div>
+      <div>
+        
       </div>
     </div>
   );
