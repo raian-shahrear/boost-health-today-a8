@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import profile from '../../profile.jpg';
 import { getLocalStorage, setLocalStorage } from '../../utilities/LocalStorage';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ExerciseDetails = (props) => {
   const {reqTime} = props;
@@ -42,8 +44,11 @@ const ExerciseDetails = (props) => {
     setBTFromLC(getBreakTime);
   }, [breakTime])
 
+  // addToast
+  const notify = () => toast("Congratulation! You have done your activities.")
+  
   return (
-    <div className='sticky top-0'>
+    <div className='lg:sticky top-0'>
       <div className='flex justify-between lg:block'>
         <div className='flex items-center gap-4 lg:mb-8'>
           <img className='rounded-3xl w-16' src={profile} alt="profile-pic" />
@@ -97,9 +102,20 @@ const ExerciseDetails = (props) => {
       </div>
 
       <div className='text-center'>
-        <button className='btn bg-teal-600 hover:bg-teal-800 border-none w-1/2 lg:w-full text-base'>
+        <button onClick={()=>notify()} className='btn bg-teal-600 hover:bg-teal-800 border-none w-1/2 lg:w-full text-base'>
           Activity Completed
         </button>
+        <ToastContainer 
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </div>
     </div>
   );
