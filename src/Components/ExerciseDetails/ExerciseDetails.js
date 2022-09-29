@@ -54,7 +54,11 @@ const ExerciseDetails = () => {
         </div>
       </div>
 
-      
+      <div className='text-center'>
+        <button className='btn bg-teal-600 hover:bg-teal-800 border-none w-1/2 lg:w-full text-base'>
+          Activity Completed
+        </button>
+      </div>
     </div>
   );
 };
