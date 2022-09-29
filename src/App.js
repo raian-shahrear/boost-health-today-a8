@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Activity from './Components/Activity/Activity';
 
 function App() {
+  const [activities, setActivities] = useState([]);
+
+  useEffect(()=>{
+    fetch('activities.json')
+    .then(res => res.json())
+    .then(data => setActivities(data))
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='main-container'>
+        <div className="activities-container">
+          <h1 className='text-4xl'>Boost Health Today</h1>
+          <div>
+            {
+              activities.map(activity => <Activity key={activity.id} activity={activity}></Activity>)
+            }
+          </div>
+        </div>
+        <div className="exercise-details-container">
+          <h1 className='text-4xl'>hello from exercise details</h1>
+        </div>
+      </div>
     </div>
   );
 }

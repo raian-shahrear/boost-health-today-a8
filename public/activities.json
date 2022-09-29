@@ -1,0 +1,50 @@
+[
+  {
+    "id": "633483fd6013a1e6f3f1d5f9",
+    "picture": "https://images.pexels.com/photos/3837439/pexels-photo-3837439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "age": "20-55",
+    "name": "Arms: Strict Pushups",
+    "details": "Drop and give me 20! Pushups are one of the most basic yet effective bodyweight you moves can perform because of the number of muscles that are recruited to perform them.\r\n",
+    "time": 15
+  },
+  {
+    "id": "633483fdfebccb022891fed1",
+    "picture": "https://images.pexels.com/photos/3836878/pexels-photo-3836878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "age": "20-55",
+    "name": "Biceps: Concentration Curl",
+    "details": "The concentration curl is all about feeling your biceps work. You sit down on a bench, rest your elbow on the inside of your thigh, and curl a dumbbell from full extension to contraction. Lifting with one arm at a time means you’re doing more overall work — so you’ll burn more calories and allow your weaker arm to play catch up.\r\n",
+    "time": 25
+  },
+  {
+    "id": "633483fd3526c97b88b3a1b6",
+    "picture": "https://images.pexels.com/photos/4162548/pexels-photo-4162548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "age": "20-55",
+    "name": "Belly: Crunches",
+    "details": "Lie down on a plane surface, flex your knees, and place your feet on the floor, if possible. Place a thumb at the back of each ear. Hold the back of your head with the rest of the fingers. Lift your head off the floor. This is the starting position. Initiate the movement by curling up and trying to reach your knees with your head. Go back to the starting position.\r\n",
+    "time": 20
+  },
+  {
+    "id": "633483fd28835bf52238e16e",
+    "picture": "https://images.pexels.com/photos/8032770/pexels-photo-8032770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "age": "20-45",
+    "name": "Core: Barbell Ab Rollout",
+    "details": "Barbell Ab Rollouts hit your entire core without straining your back when done correctly. Make sure your hips stay in line with your knees and shoulders, and use a comfortable range of motion. Once you’re ready, you can start adding weight for even more of a challenge.\r\n",
+    "time": 25
+  },
+  {
+    "id": "633483fdbc27512ebd815a83",
+    "picture": "https://images.pexels.com/photos/5327507/pexels-photo-5327507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "age": "20-45",
+    "name": "Chest: Cable Crossover",
+    "details": "The cable crossover is a versatile exercise that’s easy to learn and vital to any chest routine. How high you set the cables is all dependent on what part of the muscle you want to hit (upper or lower). And once you figure out what you’re targeting, you can hop right in and start building your ideal chest.\r\n",
+    "time": 25
+  },
+  {
+    "id": "633483fd4b245979552303b8",
+    "picture": "https://images.pexels.com/photos/7672101/pexels-photo-7672101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "age": "20-45",
+    "name": "Back: Pullups",
+    "details": "The pullup is a classic strength-building move that everyone needs to do in the gym. But whatever you do, don’t lose your form in favor of reps. Keep those legs straight for maximum payoff.\r\n",
+    "time": 25
+  }
+]
