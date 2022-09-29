@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ExerciseDetails.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import profile from '../../profile.jpg';
+import { getLocalStorage, setLocalStorage } from '../../utilities/LocalStorage';
 
 const ExerciseDetails = (props) => {
   const {reqTime} = props;
+  //setExerciseTime
   let totalTime = 0
   for(const time of reqTime){
     totalTime = totalTime + time;
   }
 
+  //setLocalStorageData
   const [breakTime, setBreakTime] = useState(0);
   const breakFor10Min = () =>{
     setBreakTime(10);
@@ -30,6 +33,14 @@ const ExerciseDetails = (props) => {
   const breakFor60Min = () =>{
     setBreakTime(60);
   }
+  setLocalStorage(breakTime);
+  
+  //getLocalStorageDta and setBreakTime
+  const [BTFromLC, setBTFromLC] = useState(0)
+  useEffect( () => {
+    const getBreakTime = getLocalStorage();
+    setBTFromLC(getBreakTime);
+  }, [breakTime])
 
   return (
     <div className='sticky top-0'>
@@ -80,7 +91,7 @@ const ExerciseDetails = (props) => {
           </div>
           <div className='bg-slate-100 p-6 rounded-lg flex flex-wrap justify-between'>
             <h3 className='text-lg font-semibold'>Break time</h3>
-            <h3 className='text-lg font-semibold text-slate-500'><span>{breakTime}</span> minutes</h3>
+            <h3 className='text-lg font-semibold text-slate-500'><span>{BTFromLC}</span> minutes</h3>
           </div>
         </div>
       </div>
