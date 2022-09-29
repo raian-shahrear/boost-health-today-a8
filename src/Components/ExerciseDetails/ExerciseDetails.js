@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ExerciseDetails.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
@@ -6,10 +6,29 @@ import profile from '../../profile.jpg';
 
 const ExerciseDetails = (props) => {
   const {reqTime} = props;
-  
   let totalTime = 0
   for(const time of reqTime){
     totalTime = totalTime + time;
+  }
+
+  const [breakTime, setBreakTime] = useState(0);
+  const breakFor10Min = () =>{
+    setBreakTime(10);
+  }
+  const breakFor20Min = () =>{
+    setBreakTime(20);
+  }
+  const breakFor30Min = () =>{
+    setBreakTime(30);
+  }
+  const breakFor40Min = () =>{
+    setBreakTime(40);
+  }
+  const breakFor50Min = () =>{
+    setBreakTime(50);
+  }
+  const breakFor60Min = () =>{
+    setBreakTime(60);
   }
 
   return (
@@ -45,12 +64,12 @@ const ExerciseDetails = (props) => {
         <div className='lg:my-8'>
           <h2 className='text-xl font-semibold mb-4'>Add A Break</h2>
           <div className='bg-slate-100 p-6 rounded-lg flex flex-wrap justify-between gap-3 w-1/2 lg:w-full'>
-            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white '>10min</button>
-            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>20min</button>
-            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>30min</button>
-            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>40min</button>
-            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>50min</button>
-            <button className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>60min</button>
+            <button onClick={()=> breakFor10Min()} className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white '>10min</button>
+            <button onClick={()=> breakFor20Min()} className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>20min</button>
+            <button onClick={()=> breakFor30Min()} className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>30min</button>
+            <button onClick={()=> breakFor40Min()} className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>40min</button>
+            <button onClick={()=> breakFor50Min()} className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>50min</button>
+            <button onClick={()=> breakFor60Min()} className='btn bg-white text-black border-none rounded-full lowercase text-base hover:bg-teal-800 hover:text-white'>60min</button>
           </div>
         </div>
         <div className='lg:mb-16 w-1/2 lg:w-full'>
@@ -61,7 +80,7 @@ const ExerciseDetails = (props) => {
           </div>
           <div className='bg-slate-100 p-6 rounded-lg flex flex-wrap justify-between'>
             <h3 className='text-lg font-semibold'>Break time</h3>
-            <h3 className='text-lg font-semibold text-slate-500'><span>0</span> minutes</h3>
+            <h3 className='text-lg font-semibold text-slate-500'><span>{breakTime}</span> minutes</h3>
           </div>
         </div>
       </div>
