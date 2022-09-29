@@ -15,8 +15,8 @@ function App() {
     <div className='App'>
       <div className='main-container'>
         <div className="activities-container">
-          <h1 className='text-4xl'>Boost Health Today</h1>
-          <div>
+          <h1 className='text-4xl font-bold text-teal-600'>Boost Health Today</h1>
+          <div className='my-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {
               activities.map(activity => <Activity key={activity.id} activity={activity}></Activity>)
             }
