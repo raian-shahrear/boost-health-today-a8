@@ -45,7 +45,13 @@ const ExerciseDetails = (props) => {
   }, [breakTime])
 
   // addToast
-  const notify = () => toast("Congratulation! You have done your activities.")
+  const notify = () =>{
+    if(BTFromLC && totalTime){
+      toast("Congratulation! You have done your activities.")
+    }else{
+      alert('To see Toast, please complete the Exercise Details!')
+    }
+  }
   
   return (
     <div className='lg:sticky top-0'>
@@ -66,7 +72,7 @@ const ExerciseDetails = (props) => {
             <p className='text-lg text-slate-700'>Weight</p>
           </div>
           <div>
-            <h5><span className='text-3xl font-semibold'>5.9</span><span className='text-slate-500'>inch</span></h5>
+            <h5><span className='text-3xl font-semibold'>6.2</span><span className='text-slate-500'>inch</span></h5>
             <p className='text-lg text-slate-700'>Height</p>
           </div>
           <div>
