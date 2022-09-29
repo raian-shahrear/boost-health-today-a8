@@ -7,12 +7,19 @@ import ExerciseDetails from './Components/ExerciseDetails/ExerciseDetails';
 
 function App() {
   const [activities, setActivities] = useState([]);
+  const [reqTime, setReqTime] = useState([]);
 
   useEffect(()=>{
     fetch('activities.json')
     .then(res => res.json())
     .then(data => setActivities(data))
   }, [])
+
+  const AddToList = (time) =>{
+    if(time){
+      setReqTime([...reqTime, time]); 
+    }
+  }
 
   return (
     <div className='App'>
@@ -24,12 +31,12 @@ function App() {
             </h1>
           <div className='my-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {
-              activities.map(activity => <Activity key={activity.id} activity={activity}></Activity>)
+              activities.map(activity => <Activity key={activity.id} activity={activity} AddToList={AddToList}></Activity>)
             }
           </div>
         </div>
         <div className="exercise-details-container">
-          <ExerciseDetails></ExerciseDetails>
+          <ExerciseDetails reqTime={reqTime}></ExerciseDetails>
         </div>
       </div>
     </div>

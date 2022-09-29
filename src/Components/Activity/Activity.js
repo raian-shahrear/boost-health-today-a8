@@ -2,7 +2,7 @@ import React from 'react';
 import './Activity.css';
 
 const Activity = (props) => {
-  const {activity} = props;
+  const {activity, AddToList} = props;
   const {picture, name, details, age, time} = activity;
   return (
     <div>
@@ -16,7 +16,7 @@ const Activity = (props) => {
           <h4 className='font-semibold'>For Age: {age}</h4>
           <h4 className='font-semibold'>Time Require: {time}min</h4>
           <div className="card-actions">
-            <button className="btn bg-teal-600 hover:bg-teal-800 border-none w-full text-base">Add To List</button>
+            <button onClick={()=>AddToList(time)} className="btn bg-teal-600 hover:bg-teal-800 border-none w-full text-base">Add To List</button>
           </div>
         </div>
       </div>

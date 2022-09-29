@@ -4,7 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import profile from '../../profile.jpg';
 
-const ExerciseDetails = () => {
+const ExerciseDetails = (props) => {
+  const {reqTime} = props;
+  
+  let totalTime = 0
+  for(const time of reqTime){
+    totalTime = totalTime + time;
+  }
+
   return (
     <div className='sticky top-0'>
       <div className='flex justify-between lg:block'>
@@ -50,7 +57,7 @@ const ExerciseDetails = () => {
           <h2 className='text-xl font-semibold mb-4'>Exercise Details</h2>
           <div className='bg-slate-100 p-6 mb-4 rounded-lg flex flex-wrap justify-between'>
             <h3 className='text-lg font-semibold'>Exercise time</h3>
-            <h3 className='text-lg font-semibold text-slate-500'><span>0</span> minutes</h3>
+            <h3 className='text-lg font-semibold text-slate-500'><span>{totalTime}</span> minutes</h3>
           </div>
           <div className='bg-slate-100 p-6 rounded-lg flex flex-wrap justify-between'>
             <h3 className='text-lg font-semibold'>Break time</h3>
