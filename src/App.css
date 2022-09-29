@@ -1,15 +1,12 @@
 .App {
   background-color: #F0FDFA;
 }
-.main-container{
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-}
 .activities-container{
   width: 90%;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 .exercise-details-container{
   background-color: #ffffff;
   padding: 50px 20px;
+  position: relative;
 }
