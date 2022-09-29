@@ -12,7 +12,7 @@ const Activity = (props) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
-          <p>{details.length>100? details.slice(0, 100) + '...' : details}</p>
+          <p>{details.length>100 ? details.slice(0, 100) + '...' : details}</p>
           <h4 className='font-semibold'>For Age: {age}</h4>
           <h4 className='font-semibold'>Time Require: {time}min</h4>
           <div className="card-actions">

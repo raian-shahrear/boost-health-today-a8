@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
 import Activity from './Components/Activity/Activity';
 import ExerciseDetails from './Components/ExerciseDetails/ExerciseDetails';
+import QueAns from './Components/QueAns/QueAns';
 
 function App() {
   const [activities, setActivities] = useState([]);
@@ -35,9 +36,12 @@ function App() {
             }
           </div>
         </div>
-        <div className="exercise-details-container">
+        <div className="exercise-details-container shadow-xl lg:rounded-bl-2xl">
           <ExerciseDetails reqTime={reqTime}></ExerciseDetails>
         </div>
+      </div>
+      <div className='QueAns-container'>
+        <QueAns></QueAns>
       </div>
     </div>
   );
