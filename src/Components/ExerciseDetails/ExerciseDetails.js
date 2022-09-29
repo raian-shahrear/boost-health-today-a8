@@ -1,5 +1,7 @@
 import React from 'react';
 import './ExerciseDetails.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import profile from '../../profile.jpg';
 
 const ExerciseDetails = () => {
@@ -10,7 +12,10 @@ const ExerciseDetails = () => {
           <img className='rounded-3xl w-16' src={profile} alt="profile-pic" />
           <div>
             <h3 className='text-xl font-semibold'>Junayid Saki</h3>
-            <p>Dhaka, Bangladesh</p>
+            <p className='flex items-center gap-2 text-slate-500'>
+              <FontAwesomeIcon icon={faLocationDot} />
+              <p>Dhaka, Bangladesh</p>
+            </p>
           </div>
         </div>
         <div className='flex flex-wrap justify-between bg-slate-100 p-6 rounded-lg w-2/5 lg:w-full'>
