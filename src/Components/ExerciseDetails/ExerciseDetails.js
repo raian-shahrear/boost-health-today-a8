@@ -8,12 +8,16 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ExerciseDetails = (props) => {
-  const {reqTime} = props;
+  const {reqTime, setReqTime} = props;
   //setExerciseTime
+  const [activityTime, setActivityTime] = useState(0);
   let totalTime = 0
   for(const time of reqTime){
     totalTime = totalTime + time;
   }
+  useEffect(()=>{
+    setActivityTime(totalTime);
+  }, [totalTime])
 
   //setLocalStorageData
   const [breakTime, setBreakTime] = useState(0);
@@ -47,7 +51,10 @@ const ExerciseDetails = (props) => {
   // addToast
   const notify = () =>{
     if(BTFromLC && totalTime){
-      toast("Congratulation! You have done your activities.")
+      toast("Congratulation! You have done your activities.");
+      setBTFromLC(0);
+      setActivityTime(0);
+      setReqTime([]);
     }else{
       alert('To see Toast, please complete the Exercise Details!')
     }
@@ -98,7 +105,7 @@ const ExerciseDetails = (props) => {
           <h2 className='text-xl font-semibold mb-4'>Exercise Details</h2>
           <div className='bg-slate-100 p-6 mb-4 rounded-lg flex flex-wrap justify-between'>
             <h3 className='text-lg font-semibold'>Exercise time</h3>
-            <h3 className='text-lg font-semibold text-slate-500'><span>{totalTime}</span> minutes</h3>
+            <h3 className='text-lg font-semibold text-slate-500'><span>{activityTime}</span> minutes</h3>
           </div>
           <div className='bg-slate-100 p-6 rounded-lg flex flex-wrap justify-between'>
             <h3 className='text-lg font-semibold'>Break time</h3>

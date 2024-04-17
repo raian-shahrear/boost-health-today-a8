@@ -38,7 +38,7 @@ function App() {
           </div>
         </div>
         <div className="exercise-details-container shadow-xl lg:rounded-bl-2xl">
-          <ExerciseDetails reqTime={reqTime}></ExerciseDetails>
+          <ExerciseDetails reqTime={reqTime} setReqTime={setReqTime}></ExerciseDetails>
         </div>
       </div>
       <div className='QueAns-container bg-white shadow-xl rounded-2xl '>
